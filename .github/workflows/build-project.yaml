@@ -2,6 +2,13 @@ name: Build Project
 on:
   workflow_call:
   workflow_dispatch:
+on:
+  release:
+    types:
+      - published
+    branches:
+      - master
+      - 'release/**'
 jobs:
   check-event:
     name: Event Data 🔎

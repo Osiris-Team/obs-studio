@@ -1,12 +1,7 @@
 name: Publish
 run-name: Publish Repository Actions 🛫
 on:
-  release:
-    types:
-      - published
-    branches:
-      - master
-      - 'release/**'
+  workflow_dispatch:
 permissions:
   contents: read
 concurrency:
